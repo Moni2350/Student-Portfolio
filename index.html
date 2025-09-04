@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monika – Personal Profile</title>
+  <!--
+    Naan Mudhalvan 2025 – Fundamentals of Web Development
+    Final Project: Personal Profile WebpageRequirements covered:
+✓ Heading with your name
+✓ Paragraph describing yourself
+✓ Ordered list of technical skills
+✓ Footer with contact email
+
+Marking-ready extras:
+- Clean structure (header/main/section/footer)
+- Proper indentation & semantic HTML
+- Minimal, accessible CSS (inline here for simple submission)
+
+-->
+
+  <style>
+    /* Minimal, readable styling for a neat presentation */
+    :root {
+      --bg: #f7f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --ring: rgba(37, 99, 235, 0.25);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: var(--bg); line-height: 1.6;
+    }
+    .container {
+      max-width: 760px; margin: 48px auto; padding: 0 16px;
+    }
+    .card {
+      background: var(--card); border-radius: 16px; padding: 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      border: 1px solid #eef2ff;
+    }
+    header h1 { margin: 0 0 8px; font-size: 2rem; }
+    header p.tagline { margin: 0; color: var(--muted); }
+
+    section { margin-top: 24px; }
+    .section-title { font-size: 1.125rem; margin: 0 0 8px; color: var(--accent); }
+    .about { color: #374151; }
+
+    ol.skills { margin: 8px 0 0 20px; }
+    ol.skills li { margin-bottom: 6px; }
+
+    .info {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;
+    }
+    .pill { background: #eef2ff; color: #1e3a8a; padding: 6px 10px; border-radius: 999px; display: inline-block; font-size: 0.9rem; }
+
+    footer {
+      margin-top: 28px; padding-top: 16px; border-top: 1px dashed #e5e7eb; color: var(--muted); font-size: 0.95rem;
+    }
+    a.mail { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+    a.mail:focus { outline: 3px solid var(--ring); border-radius: 4px; }
+
+    /* Small screen tweaks */
+    @media (max-width: 520px) {
+      .info { grid-template-columns: 1fr; }
+    }
+  </style></head>
+<body>
+  <div class="container">
+    <div class="card" role="main">
+      <header>
+        <!-- Heading with your name -->
+        <h1>Monika</h1>
+        <p class="tagline">BSc Computer Science• First-year Undergraduate</p>
+      </header><section aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title">About Me</h2>
+    <!-- Paragraph describing yourself -->
+    <p class="about">
+      I am a curious and disciplined learner interested in building useful, user-friendly web experiences.
+      I’m currently learning the foundations—HTML, CSS, JavaScript—and improving my problem-solving skills.
+      I enjoy clean code, simple UI, and teamwork.
+    </p>
+    <div class="info">
+      <span class="pill">Location: Tamil Nadu, India</span>
+      <span class="pill">Interests: Web Dev</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills-title">
+    <h2 id="skills-title" class="section-title">Technical Skills</h2>
+    <!-- Ordered list of technical skills -->
+    <ol class="skills">
+      <li>HTML – semantic structure & accessibility basics</li>
+      <li>CSS – layouts, spacing, and responsive design</li>
+      <li>JavaScript – DOM interactions and fundamentals</li>
+      <li>Git & GitHub – version control and project hosting</li>
+      <li>Java – beginner level (OOP basics)</li>
+      <li>MySQL – basic CRUD and queries</li>
+      <li>Design tools – Canva & Adobe Express (for assets)</li>
+    </ol>
+  </section>
+
+  <footer>
+    <!-- Footer with contact email -->
+    Contact: <a class="mail" href="mailto:yourname@example.com">yourname@example.com</a>
+  </footer>
+</div>
+
+  </div>
+</body>
+</html>
